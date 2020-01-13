@@ -52,23 +52,46 @@ navItems[3].classList.add('nav-features');
 navItems[4].classList.add('nav-about');
 navItems[5].classList.add('nav-contact')
 
+
 const navServices = document.querySelector('.nav-services');
 navServices.append(siteContent["nav"]["nav-item-1"]);
+navServices.style.color = 'green';
 
 const navProduct = document.querySelector('.nav-product');
 navProduct.append(siteContent["nav"]["nav-item-2"]);
+navProduct.style.color = 'green';
 
 const navVision = document.querySelector('.nav-vision');
 navVision.append(siteContent["nav"]['nav-item-3']);
+navVision.style.color = 'green';
 
 const navFeatures = document.querySelector('.nav-features');
 navFeatures.append(siteContent["nav"]["nav-item-4"]);
+navFeatures.style.color = 'green';
 
 const navAbout = document.querySelector('.nav-about');
 navAbout.append(siteContent["nav"]["nav-item-5"]);
+navAbout.style.color = 'green';
 
 const navContact = document.querySelector('.nav-contact');
 navContact.append(siteContent["nav"]["nav-item-6"]);
+navContact.style.color = 'green';
+
+
+// Create new nav items
+
+const history = document.createElement('a');
+history.textContent = 'History';
+history.style.color = 'green';
+
+const parentNav = document.querySelector('nav');
+parentNav.append(history);
+
+const team = document.createElement('a');
+team.textContent = 'Team';
+team.style.color = 'green';
+
+parentNav.prepend(team);
 
 
 // Creates header title, image, and button content
