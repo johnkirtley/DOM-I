@@ -78,6 +78,25 @@ navContact.append(siteContent["nav"]["nav-item-6"]);
 navContact.style.color = 'green';
 
 
+// Stretch Goal
+const newButton = document.createElement('button');
+newButton.textContent = 'Press Me';
+
+newButton.addEventListener('click', function () {
+  if (cta.style.color === 'black') {
+    cta.style.color = 'red';
+  } else if (cta.style.color === 'red') {
+    cta.style.color = 'blue';
+  } else {
+    cta.style.color = 'black';
+  }
+})
+
+const parentCTA = document.querySelector('.cta-text')
+parentCTA.append(newButton);
+// *****************
+
+
 // Create new nav items
 
 const history = document.createElement('a');
