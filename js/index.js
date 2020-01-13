@@ -52,6 +52,8 @@ navItems[3].textContent = 'Features';
 navItems[4].textContent = 'About';
 navItems[5].textContent = 'Contact';
 
+
+// Creates header title, image, and button content
 const cta = document.querySelector('h1');
 cta.textContent = 'dom is awesome';
 
@@ -60,3 +62,48 @@ ctaButton.textContent = 'Get Started'
 
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+// Creates h4 titles
+const contentTitles = document.querySelectorAll('h4');
+
+contentTitles[0].textContent = 'Features';
+contentTitles[1].textContent = 'About';
+contentTitles[2].textContent = 'Services';
+contentTitles[3].textContent = 'Product';
+contentTitles[4].textContent = 'Vision';
+contentTitles[5].textContent = 'Contact';
+
+// Creates paragraph content
+const paragraphs = document.querySelectorAll('p');
+paragraphs[0].classList.add('features-content');
+paragraphs[1].classList.add('about-content');
+paragraphs[2].classList.add('services-content');
+paragraphs[3].classList.add('product-content');
+paragraphs[4].classList.add('vision-content');
+paragraphs[5].classList.add('address');
+paragraphs[6].classList.add('phone');
+paragraphs[7].classList.add('email');
+paragraphs[8].classList.add('footer-content');
+
+
+const features = document.querySelector('.features-content');
+features.append(siteContent["main-content"]["features-content"]);
+
+const about = document.querySelector('.about-content');
+about.append(siteContent["main-content"]["about-content"]);
+
+const services = document.querySelector(".services-content");
+services.append(siteContent["main-content"]["services-content"]);
+
+const product = document.querySelector('.product-content');
+product.append(siteContent["main-content"]["product-content"]);
+
+const vision = document.querySelector('.vision-content');
+vision.append(siteContent["main-content"]["vision-content"]);
+
+
+// Sets middle image
+const images = document.querySelectorAll('img');
+const middleImage = images[2];
+
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
