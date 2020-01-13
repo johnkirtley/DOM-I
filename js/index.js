@@ -45,20 +45,38 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Creates navigation menu items
 const navItems = document.querySelectorAll('a');
 
-navItems[0].textContent = 'Services';
-navItems[1].textContent = 'Product';
-navItems[2].textContent = 'Vision';
-navItems[3].textContent = 'Features';
-navItems[4].textContent = 'About';
-navItems[5].textContent = 'Contact';
+navItems[0].classList.add('nav-services');
+navItems[1].classList.add('nav-product');
+navItems[2].classList.add('nav-vision');
+navItems[3].classList.add('nav-features');
+navItems[4].classList.add('nav-about');
+navItems[5].classList.add('nav-contact')
+
+const navServices = document.querySelector('.nav-services');
+navServices.append(siteContent["nav"]["nav-item-1"]);
+
+const navProduct = document.querySelector('.nav-product');
+navProduct.append(siteContent["nav"]["nav-item-2"]);
+
+const navVision = document.querySelector('.nav-vision');
+navVision.append(siteContent["nav"]['nav-item-3']);
+
+const navFeatures = document.querySelector('.nav-features');
+navFeatures.append(siteContent["nav"]["nav-item-4"]);
+
+const navAbout = document.querySelector('.nav-about');
+navAbout.append(siteContent["nav"]["nav-item-5"]);
+
+const navContact = document.querySelector('.nav-contact');
+navContact.append(siteContent["nav"]["nav-item-6"]);
 
 
 // Creates header title, image, and button content
 const cta = document.querySelector('h1');
-cta.textContent = 'dom is awesome';
+cta.append(siteContent["cta"]["h1"])
 
 const ctaButton = document.querySelector('button');
-ctaButton.textContent = 'Get Started'
+ctaButton.append(siteContent["cta"]["button"]);
 
 const ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
@@ -66,12 +84,30 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 // Creates h4 titles
 const contentTitles = document.querySelectorAll('h4');
 
-contentTitles[0].textContent = 'Features';
-contentTitles[1].textContent = 'About';
-contentTitles[2].textContent = 'Services';
-contentTitles[3].textContent = 'Product';
-contentTitles[4].textContent = 'Vision';
-contentTitles[5].textContent = 'Contact';
+contentTitles[0].classList.add('features-title')
+contentTitles[1].classList.add('about-title');
+contentTitles[2].classList.add('services-title');
+contentTitles[3].classList.add('product-title');
+contentTitles[4].classList.add('vision-title');
+contentTitles[5].classList.add('contact-title');
+
+const featuresTitle = document.querySelector('.features-title');
+featuresTitle.append(siteContent["main-content"]["features-h4"]);
+
+const aboutTitle = document.querySelector('.about-title');
+aboutTitle.append(siteContent["main-content"]["about-h4"]);
+
+const servicesTitle = document.querySelector('.services-title');
+servicesTitle.append(siteContent["main-content"]["services-h4"]);
+
+const productTitle = document.querySelector('.product-title');
+productTitle.append(siteContent["main-content"]["product-h4"]);
+
+const visionTitle = document.querySelector('.vision-title');
+visionTitle.append(siteContent["main-content"]["vision-h4"]);
+
+const contactTitle = document.querySelector('.contact-title');
+contactTitle.append(siteContent["contact"]["contact-h4"]);
 
 // Creates paragraph content
 const paragraphs = document.querySelectorAll('p');
@@ -102,8 +138,22 @@ const vision = document.querySelector('.vision-content');
 vision.append(siteContent["main-content"]["vision-content"]);
 
 
-// Sets middle image
+// Sets middle-content image
 const images = document.querySelectorAll('img');
 const middleImage = images[2];
 
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+// Sets contact info
+const addressInfo = document.querySelector('.address');
+addressInfo.append(siteContent["contact"]["address"]);
+
+const phoneNumber = document.querySelector('.phone');
+phoneNumber.append(siteContent["contact"]["phone"]);
+
+const email = document.querySelector('.email');
+email.append(siteContent["contact"]["email"]);
+
+// Sets footer content
+const footer = document.querySelector('.footer-content');
+footer.append(siteContent["footer"]["copyright"]);
